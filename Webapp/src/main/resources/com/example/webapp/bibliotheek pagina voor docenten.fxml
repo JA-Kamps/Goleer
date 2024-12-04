@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08415c" height="409.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08415c" height="74.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <ImageView fitHeight="68.0" fitWidth="73.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@goleer.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="106.0" layoutY="99.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="265.0" style="-fx-background-color: #EB5E28;" text="Bibliotheek">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="106.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 1}" />
+      <Button layoutX="197.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 2}" />
+      <Button layoutX="289.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 3}" />
+      <Button layoutX="106.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 4}" />
+      <Button layoutX="197.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 5}" />
+      <Button layoutX="289.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 6}" />
+      <Button layoutX="106.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 7}" />
+      <Button layoutX="197.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 8}" />
+      <Button layoutX="289.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 9}" />
+      <Button layoutX="390.0" layoutY="99.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="178.0" style="-fx-background-color: #EB5E28;" text="Creeër nieuw">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="106.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome {leraar.naam" wrappingWidth="128.81011962890625">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="316.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{pagina informatie}" wrappingWidth="224.01007080078125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="12.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="modules" textAlignment="CENTER" wrappingWidth="69.610107421875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="12.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log uit" textAlignment="CENTER" wrappingWidth="69.610107421875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="12.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="klassen" textAlignment="CENTER" wrappingWidth="69.610107421875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
