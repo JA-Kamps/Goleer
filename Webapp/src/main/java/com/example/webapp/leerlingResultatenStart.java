@@ -12,7 +12,7 @@ public class leerlingResultatenStart extends Application {
     public void start(Stage stage) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Persoonlijke resultaten.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Resultaten.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

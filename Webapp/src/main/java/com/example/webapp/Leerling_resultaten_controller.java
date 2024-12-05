@@ -13,22 +13,35 @@ import java.util.Objects;
 
 public class Leerling_resultaten_controller {
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
     @FXML
     public Button rekenenKnop;
+    @FXML
+    public Button persoonlijkeResultatenKnop;
     @FXML
     public Button taalKnop;
     @FXML
     public void openRekenen (ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Leerling-Rekenen.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Rekenen.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+
     }
-    public void openTaal (ActionEvent event) {
+    public void openTaal (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Taal.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void openVakken (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Persoonlijke resultaten.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
 
     }
 }
