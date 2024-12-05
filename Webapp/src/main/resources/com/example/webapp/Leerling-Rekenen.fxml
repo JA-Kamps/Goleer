@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_resultaten_controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: Green;">
+         <children>
+            <BorderPane prefHeight="374.0" prefWidth="79.0" style="-fx-background-color: DarkGreen;" />
+            <BorderPane layoutX="78.0" prefHeight="49.0" prefWidth="522.0" style="-fx-background-color: DarkGreen;">
+               <center>
+                  <Label text="Rekenen" textFill="#9a9a9a" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </center>
+               <right>
+                  <Avatar BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <Button layoutX="3.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Meedoen" />
+            <Button layoutX="3.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Vakken" />
+            <Button layoutX="3.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
+            <Pane layoutX="100.0" layoutY="108.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 1">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="40.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 7.9" />
+               </children>
+            </Pane>
+            <Pane layoutX="241.0" layoutY="108.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 2">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="40.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 7.3" />
+               </children>
+            </Pane>
+            <Pane layoutX="380.0" layoutY="108.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 3">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="40.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 6.2" />
+               </children>
+            </Pane>
+            <Pane layoutX="100.0" layoutY="193.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 4">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="42.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 7.3" />
+               </children>
+            </Pane>
+            <Pane layoutX="241.0" layoutY="193.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 5">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="42.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 8.5" />
+               </children>
+            </Pane>
+            <Pane layoutX="380.0" layoutY="193.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 6">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="42.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 5.4" />
+               </children>
+            </Pane>
+            <Pane layoutX="380.0" layoutY="278.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 9">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="41.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 6.3" />
+               </children>
+            </Pane>
+            <Pane layoutX="241.0" layoutY="278.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 8">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="41.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 9.3" />
+               </children>
+            </Pane>
+            <Pane layoutX="100.0" layoutY="278.0" prefHeight="69.0" prefWidth="117.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="Module 7">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="42.0" prefHeight="17.0" prefWidth="108.0" text="Resultaat: 5.2" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
