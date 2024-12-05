@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_resultaten_controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Green;">
+         <children>
+            <BorderPane layoutY="46.0" prefHeight="330.0" prefWidth="83.0" style="-fx-background-color: darkGreen;">
+               <top>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: orange;" text="Meedoen" BorderPane.alignment="CENTER" />
+               </top>
+            </BorderPane>
+            <BorderPane layoutY="-4.0" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: DarkGreen;">
+               <bottom>
+                  <Label prefHeight="50.0" prefWidth="343.0" text="Persoonlijke resultaten" textFill="#8d8d8d" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </bottom>
+            </BorderPane>
+            <Button layoutX="3.0" layoutY="83.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Vakken" />
+            <Button layoutX="3.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
+            <Button fx:id="rekenenKnop" layoutX="265.0" layoutY="118.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="taalKnop" layoutX="265.0" layoutY="178.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Taal">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="274.0" layoutY="58.0" prefHeight="50.0" prefWidth="121.0" text="Vakken:">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
