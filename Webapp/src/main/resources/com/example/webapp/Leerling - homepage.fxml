@@ -5,14 +5,11 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -47,66 +44,23 @@
                </children>
             </Pane>
             <Pane layoutY="35.0" prefHeight="365.0" prefWidth="91.0" style="-fx-background-color: darkgreen;" />
-            <Button layoutX="7.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Meedoen" />
             <Button layoutX="7.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Resultaat" />
-            <Button layoutX="7.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Vakken" />
+            <Button layoutX="7.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Modules" />
             <Pane layoutX="453.0" layoutY="107.0" prefHeight="59.0" prefWidth="83.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
             <Pane layoutX="177.0" layoutY="107.0" prefHeight="59.0" prefWidth="276.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
             <Pane layoutX="116.0" layoutY="107.0" prefHeight="59.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 12;">
                <children>
-                  <Text fill="#9a9a9a" layoutX="342.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Klas}">
+                  <Text fill="#9a9a9a" layoutX="342.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%class.className">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Text>
-                  <Text fill="#9a9a9a" layoutX="76.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Naam}">
+                  <Text fill="#9a9a9a" layoutX="76.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%leerling.Name">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Text>
                   <Avatar layoutX="14.0" layoutY="10.0" />
-               </children>
-            </Pane>
-            <Pane layoutX="123.0" layoutY="218.0" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 12;">
-               <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="3.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../This%20person%20does%20not%20exict/Kind%207%20jaar%20(excl%20baard).png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="146.96290588378906" />
-                  <Text layoutX="117.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.5/5" textAlignment="CENTER" wrappingWidth="26.962890625" />
-                  <ImageView fitHeight="25.0" fitWidth="101.0" layoutX="2.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Downloads/45-sterren-van-de-5.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="34.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nora" textAlignment="CENTER" wrappingWidth="76.0">
-                     <font>
-                        <Font size="13.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <Pane layoutX="370.0" layoutY="218.0" prefHeight="151.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 12;">
-               <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../This%20person%20does%20not%20exict/Man%2032%20jaar%20(incl%20baard).png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mijn leerlingen kunnen niet genoeg krijgen van GoLeer. Voor mij is het ook een last van mijn schouder." textAlignment="CENTER" wrappingWidth="146.96290588378906" />
-                  <Text layoutX="124.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5/5" textAlignment="CENTER" wrappingWidth="26.962890625" />
-                  <ImageView fitHeight="25.0" fitWidth="101.0" layoutX="3.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Downloads/Screenshot%202024-12-04%20105925.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="54.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jeroen" wrappingWidth="76.0">
-                     <font>
-                        <Font size="13.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
          </children>

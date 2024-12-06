@@ -92,8 +92,8 @@
             <ButtonBar prefHeight="40.0" prefWidth="200.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08415c" height="377.0" layoutX="-5.0" stroke="BLACK" strokeType="INSIDE" width="97.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08415c" height="64.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
-            <Text fill="#fffdfd" layoutX="112.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome {leraar.naam" wrappingWidth="133.81768798828125" />
-            <Text fill="WHITE" layoutX="304.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Pagina informatie}">
+            <Text fill="#fffdfd" layoutX="170.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%leraar.Name" wrappingWidth="133.81768798828125" />
+            <Text fill="WHITE" layoutX="304.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%class.Classname">
                <font>
                   <Font size="24.0" />
                </font>
@@ -113,9 +113,9 @@
                </image>
             </ImageView>
             <Button defaultButton="true" layoutX="145.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="459.0" style="-fx-background-color: #47BAEB;" text="voeg leerling toe" textFill="WHITE" />
-            <Button layoutX="148.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="225.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="349.0" layoutY="93.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="148.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="225.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="349.0" layoutY="93.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="395.0" layoutY="93.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="559.0" layoutY="93.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="481.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
@@ -136,9 +136,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="126.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
@@ -154,9 +154,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="158.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="158.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
@@ -172,9 +172,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="191.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="191.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="191.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="191.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
@@ -190,9 +190,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="224.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="224.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="224.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" />
@@ -208,9 +208,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="256.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="256.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="256.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="256.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" />
@@ -226,9 +226,9 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
-            <Button layoutX="147.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Nummer" />
-            <Button layoutX="224.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="Naam" />
-            <Button layoutX="348.0" layoutY="289.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Score" />
+            <Button layoutX="147.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Leerling.idLeerling" />
+            <Button layoutX="224.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #47BAEB;" text="%leerling.className" />
+            <Button layoutX="348.0" layoutY="289.0" mnemonicParsing="false" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="%Module_has_Class_has_Leerling.score" />
             <Button layoutX="394.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" style="-fx-background-color: #47BAEB; -fx-background-color: ;" text="Wachtwoord" />
             <Button layoutX="558.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #47BAEB;" />
             <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="480.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
@@ -244,6 +244,7 @@
                   <Image url="@../../Downloads/image-removebg-preview%20(2).png" />
                </image>
             </ImageView>
+            <Text fill="#fffdfd" layoutX="100.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="60.0" />
       </children>
     </AnchorPane>
   </children>

@@ -22,21 +22,21 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="106.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 1}" />
-      <Button layoutX="197.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 2}" />
-      <Button layoutX="289.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 3}" />
-      <Button layoutX="106.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 4}" />
-      <Button layoutX="197.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 5}" />
-      <Button layoutX="289.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 6}" />
-      <Button layoutX="106.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 7}" />
-      <Button layoutX="197.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 8}" />
-      <Button layoutX="289.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="{module 9}" />
+      <Button layoutX="106.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="197.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="289.0" layoutY="183.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="106.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="197.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="289.0" layoutY="247.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="106.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="197.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
+      <Button layoutX="289.0" layoutY="305.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-background-color: #EB5E28;" text="%Module.Name" />
       <Button layoutX="390.0" layoutY="99.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="178.0" style="-fx-background-color: #EB5E28;" text="Creeër nieuw">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="WHITE" layoutX="106.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome {leraar.naam]" wrappingWidth="128.81011962890625">
+      <Text fill="WHITE" layoutX="110.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Leraar.Name" wrappingWidth="128.81011962890625">
          <font>
             <Font size="11.0" />
          </font>
@@ -57,6 +57,11 @@
          </font>
       </Text>
       <Text fill="WHITE" layoutX="12.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="klassen" textAlignment="CENTER" wrappingWidth="69.610107421875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="47.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="48.81011199951172">
          <font>
             <Font size="11.0" />
          </font>
