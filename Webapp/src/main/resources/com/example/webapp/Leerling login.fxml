@@ -31,7 +31,7 @@
                   <TextField alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Wachtwoord" />
                </children>
             </Pane>
-            <Button layoutX="255.0" layoutY="91.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="91.0" style="-fx-background-color: orange; -fx-background-radius: 11;" text="Login" />
+            <Button fx:id="leerlngLoginKnop" layoutX="255.0" layoutY="91.0" mnemonicParsing="false" onAction="#leerlingInloggen" prefHeight="43.0" prefWidth="91.0" style="-fx-background-color: orange; -fx-background-radius: 11;" text="Login" />
          </children>
       </Pane>
    </children>
