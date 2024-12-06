@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08415c" height="409.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
@@ -37,12 +36,12 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="WHITE" layoutX="106.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome {leraar.naam" wrappingWidth="128.81011962890625">
+      <Text fill="WHITE" layoutX="106.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome {leraar.naam]" wrappingWidth="128.81011962890625">
          <font>
             <Font size="11.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="316.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{pagina informatie}" wrappingWidth="224.01007080078125">
+      <Text fill="WHITE" layoutX="316.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module Bibliotheek" wrappingWidth="224.01007080078125">
          <font>
             <Font size="24.0" />
          </font>
