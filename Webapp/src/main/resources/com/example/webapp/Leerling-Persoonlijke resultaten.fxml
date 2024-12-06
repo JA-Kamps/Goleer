@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_resultaten_controller">
    <children>
       <MenuBar>
         <menus>
@@ -49,12 +49,12 @@
             </BorderPane>
             <Button layoutX="3.0" layoutY="83.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Vakken" />
             <Button layoutX="3.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
-            <Button layoutX="265.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen">
+            <Button fx:id="rekenenKnop" layoutX="265.0" layoutY="118.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button layoutX="265.0" layoutY="178.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Taal">
+            <Button fx:id="taalKnop" layoutX="265.0" layoutY="178.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Taal">
                <font>
                   <Font size="19.0" />
                </font>
