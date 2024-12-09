@@ -39,7 +39,7 @@
             <BorderPane prefHeight="374.0" prefWidth="79.0" style="-fx-background-color: DarkGreen;" />
             <BorderPane layoutX="78.0" prefHeight="49.0" prefWidth="522.0" style="-fx-background-color: DarkGreen;">
                <bottom>
-                  <Label alignment="CENTER" text="%module.Name" textAlignment="CENTER" textFill="#9a9a9a" BorderPane.alignment="CENTER">
+                  <Label fx:id="moduleNaam" alignment="CENTER" text="module.Naam" textAlignment="CENTER" textFill="#9a9a9a" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="34.0" />
                      </font>
@@ -55,7 +55,7 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </ProgressBar>
-                  <Label layoutX="320.0" layoutY="29.0" text="%Module.number" />
+                  <Label fx:id="moduleNummer" layoutX="320.0" layoutY="29.0" text="module.Naam" />
                </children>
             </Pane>
          </children>

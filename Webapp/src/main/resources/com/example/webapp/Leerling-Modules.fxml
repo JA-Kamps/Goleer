@@ -54,7 +54,7 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button fx:id="taalKnop" layoutX="413.0" layoutY="118.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
+            <Button layoutX="413.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
                <font>
                   <Font size="13.0" />
                </font>
@@ -64,7 +64,7 @@
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button fx:id="taalKnop1" layoutX="265.0" layoutY="118.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
+            <Button layoutX="265.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
                <font>
                   <Font size="19.0" />
                </font>
