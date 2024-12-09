@@ -24,6 +24,16 @@ public class Leerling_resultaten_controller {
     public Label moduleNaam;
     @FXML
     public Label moduleNummer;
+    @FXML
+    public Button afgelopenModulesKnop;
+
+    public void openModuleResultaten (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("module resultaten leerliong.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
 
     public void openRekenen (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Module-Resultaat.fxml"));

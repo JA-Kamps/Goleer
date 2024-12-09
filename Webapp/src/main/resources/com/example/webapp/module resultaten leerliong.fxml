@@ -117,12 +117,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
@@ -131,12 +131,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
@@ -145,12 +145,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
@@ -159,12 +159,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
@@ -173,12 +173,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
@@ -187,12 +187,12 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module.Name" />
+                        <Text layoutX="20.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Module.Name" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="115.0">
                      <children>
-                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Module_has_Class_has_Leerling.Score" />
+                        <Text layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cijfer:" />
                      </children>
                   </AnchorPane>
               </items>
