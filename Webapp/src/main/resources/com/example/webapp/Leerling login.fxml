@@ -12,14 +12,14 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Text layoutX="233.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="134.13671875">
+            <Text fx:id="myLabel" layoutX="233.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="134.13671875">
                <font>
                   <Font size="32.0" />
                </font>
             </Text>
             <Pane layoutX="71.0" layoutY="183.0" prefHeight="34.0" prefWidth="458.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <TextField alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Gebruikersnaam" />
+                  <TextField fx:id="myTextField" alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Gebruikersnaam" />
                </children>
             </Pane>
          </children>
