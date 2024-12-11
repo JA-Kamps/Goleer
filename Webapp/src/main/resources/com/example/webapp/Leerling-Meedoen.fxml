@@ -98,7 +98,7 @@
                   <TextArea layoutX="5.0" layoutY="5.0" prefHeight="41.0" prefWidth="336.0" />
                </children>
             </Pane>
-            <Button layoutX="265.0" layoutY="239.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: orange;" text="Meedoen">
+            <Button fx:id="MeedoenKnop" layoutX="265.0" layoutY="239.0" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: orange;" text="Meedoen">
                <font>
                   <Font size="16.0" />
                </font>
