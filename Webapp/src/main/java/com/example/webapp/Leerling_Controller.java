@@ -15,11 +15,11 @@ public class Leerling_Controller {
 
 
     @FXML
-    public Button LoginKnop;
+    public Button loginKnop;
 
 
 
-    public void Ingelogd (ActionEvent event) throws IOException {
+    public void leerlingInloggen (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
