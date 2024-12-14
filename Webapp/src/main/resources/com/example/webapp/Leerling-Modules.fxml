@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -31,14 +32,9 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Green;">
+      <AnchorPane prefHeight="382.0" prefWidth="600.0" style="-fx-background-color: Green;">
          <children>
-            <BorderPane layoutY="46.0" prefHeight="330.0" prefWidth="83.0" style="-fx-background-color: darkGreen;">
-               <top>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: orange;" text="Meedoen" BorderPane.alignment="CENTER" />
-               </top>
-            </BorderPane>
-            <BorderPane layoutY="-4.0" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: DarkGreen;">
+            <BorderPane layoutY="-4.0" prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: DarkGreen;">
                <bottom>
                   <Label prefHeight="50.0" prefWidth="219.0" text="Jouw Modules" textFill="#8d8d8d" BorderPane.alignment="CENTER">
                      <font>
@@ -47,29 +43,34 @@
                   </Label>
                </bottom>
             </BorderPane>
-            <Button layoutX="3.0" layoutY="83.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Modules" />
-            <Button layoutX="3.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
-            <Button fx:id="rekenenKnop" layoutX="116.0" layoutY="118.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen 1A">
+            <Button fx:id="rekenenKnop" layoutX="116.0" layoutY="143.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen 1A">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button layoutX="413.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
+            <Button layoutX="415.0" layoutY="143.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Label graphicTextGap="3.0" layoutX="265.0" layoutY="58.0" prefHeight="50.0" prefWidth="140.0" text="Modules" textAlignment="RIGHT">
+            <Label graphicTextGap="3.0" layoutX="265.0" layoutY="70.0" prefHeight="50.0" prefWidth="140.0" text="Modules" textAlignment="RIGHT">
                <font>
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button layoutX="265.0" layoutY="118.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
+            <Button layoutX="265.0" layoutY="143.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Button fx:id="afgelopenModulesKnop" layoutX="90.0" layoutY="319.0" mnemonicParsing="false" onAction="#openModuleResultaten" style="-fx-background-color: orange;" text="Afgelopen modules" />
+            <Button fx:id="afgelopenModulesKnop" layoutX="107.0" layoutY="320.0" mnemonicParsing="false" onAction="#openModuleResultaten" style="-fx-background-color: orange;" text="Afgelopen modules" />
+            <Pane layoutY="64.0" prefHeight="309.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
+               <children>
+                  <Button fx:id="modulesKnop" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#openModules" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Modules" />
+                  <Button fx:id="resultatenKnop" layoutX="9.0" layoutY="49.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Resultaten" />
+                  <Button fx:id="uitlogKnop" layoutX="12.0" layoutY="271.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>

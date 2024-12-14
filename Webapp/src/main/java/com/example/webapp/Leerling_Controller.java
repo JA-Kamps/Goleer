@@ -18,11 +18,15 @@ public class Leerling_Controller {
     public Button loginKnop;
     @FXML
     public Button MeedoenKnop;
+    @FXML
+    public Button wifiKnop;
+    @FXML
+    public Button verbindenKnop;
 
 
 
     public void leerlingInloggen (ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Leerling login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
@@ -30,7 +34,21 @@ public class Leerling_Controller {
 
     }
     public void Submit (ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling login.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void openNetwerken (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("wifi-netwerken.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void verbind (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);

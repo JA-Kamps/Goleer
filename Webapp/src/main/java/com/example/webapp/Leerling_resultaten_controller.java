@@ -26,6 +26,12 @@ public class Leerling_resultaten_controller {
     public Label moduleNummer;
     @FXML
     public Button afgelopenModulesKnop;
+    @FXML
+    public Button modulesKnop;
+    @FXML
+    public Button resultatenKnop;
+    @FXML
+    public Button uitlogKnop;
 
     public void openModuleResultaten (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("module resultaten leerliong.fxml"));
@@ -51,5 +57,26 @@ public class Leerling_resultaten_controller {
         window.setScene(scene);
         window.show();
 
+    }
+    public void openResultaten (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-resultaten.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void openModules (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Modules.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void uitloggen (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
     }
 }

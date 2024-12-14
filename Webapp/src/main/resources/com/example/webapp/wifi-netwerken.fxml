@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_Controller">
+   <children>
+      <AnchorPane prefHeight="403.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="200.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+               <children>
+                  <Text layoutX="58.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Wifi netwerk 1}" />
+                  <Text layoutX="20.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Wifi netwerk 2}" textAlignment="CENTER" wrappingWidth="160.07928466796875" />
+                  <Text layoutX="58.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Wifi netwerk 3}" />
+               </children></Pane>
+            <Text layoutX="204.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecteer een wifi netwerk:" textAlignment="CENTER" wrappingWidth="190.93670654296875">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Button fx:id="verbindenKnop" layoutX="246.0" layoutY="332.0" mnemonicParsing="false" onAction="#verbind" style="-fx-background-color: orange;" text="Verbinden">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
