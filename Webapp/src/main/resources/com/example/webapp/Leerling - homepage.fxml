@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_resultaten_controller">
    <children>
       <AnchorPane prefHeight="408.0" prefWidth="601.0" style="-fx-background-color: green;">
          <children>
@@ -34,7 +34,7 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Pane layoutY="26.0" prefHeight="48.0" prefWidth="601.0" style="-fx-background-color: darkgreen;">
+            <Pane layoutY="26.0" prefHeight="68.0" prefWidth="602.0" style="-fx-background-color: darkgreen;">
                <children>
                   <Text fill="#9a9a9a" layoutX="234.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom!">
                      <font>
@@ -43,9 +43,12 @@
                   </Text>
                </children>
             </Pane>
-            <Pane layoutY="35.0" prefHeight="365.0" prefWidth="91.0" style="-fx-background-color: darkgreen;" />
-            <Button layoutX="7.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Resultaat" />
-            <Button layoutX="7.0" layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Modules" />
+            <Pane layoutY="92.0" prefHeight="309.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
+               <children>
+                  <Button fx:id="uitlogKnop" layoutX="11.0" layoutY="271.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
+               </children></Pane>
+            <Button fx:id="resultatenKnop" layoutX="7.0" layoutY="158.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Resultaten" />
+            <Button fx:id="modulesKnop" layoutX="7.0" layoutY="120.0" mnemonicParsing="false" onAction="#openModules" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Modules" />
             <Pane layoutX="453.0" layoutY="107.0" prefHeight="59.0" prefWidth="83.0" style="-fx-background-color: white; -fx-background-radius: 12;">
                <children>
                   <Label layoutX="22.0" layoutY="14.0" text="Klas">

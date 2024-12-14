@@ -34,21 +34,18 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: Green;">
+      <AnchorPane prefHeight="381.0" prefWidth="601.0" style="-fx-background-color: Green;">
          <children>
-            <BorderPane prefHeight="374.0" prefWidth="79.0" style="-fx-background-color: DarkGreen;" />
-            <BorderPane layoutX="78.0" prefHeight="49.0" prefWidth="522.0" style="-fx-background-color: DarkGreen;">
-               <bottom>
+            <BorderPane layoutX="-1.0" prefHeight="64.0" prefWidth="601.0" style="-fx-background-color: DarkGreen;">
+               <center>
                   <Label fx:id="moduleNaam" alignment="CENTER" text="module.Naam" textAlignment="CENTER" textFill="#9a9a9a" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="34.0" />
                      </font>
                   </Label>
-               </bottom>
+               </center>
             </BorderPane>
-            <Button layoutX="3.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Modules" />
-            <Button layoutX="3.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
-            <Pane layoutX="98.0" layoutY="70.0" prefHeight="290.0" prefWidth="481.0" style="-fx-background-color: white; -fx-background-radius: 11;">
+            <Pane layoutX="105.0" layoutY="77.0" prefHeight="290.0" prefWidth="481.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
                   <ProgressBar layoutX="267.0" layoutY="59.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="200.0" progress="0.79">
                      <cursor>
@@ -56,6 +53,13 @@
                      </cursor>
                   </ProgressBar>
                   <Label fx:id="moduleNummer" layoutX="320.0" layoutY="29.0" text="module.Naam" />
+               </children>
+            </Pane>
+            <Pane layoutY="64.0" prefHeight="308.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
+               <children>
+                  <Button fx:id="modulesKnop" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#openModules" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Modules" />
+                  <Button fx:id="resultatenKnop" layoutX="9.0" layoutY="52.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
+                  <Button fx:id="uitlogKnop" layoutX="11.0" layoutY="269.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
                </children>
             </Pane>
          </children>
