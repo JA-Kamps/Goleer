@@ -46,6 +46,7 @@
             <Pane layoutY="92.0" prefHeight="309.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
                <children>
                   <Button fx:id="uitlogKnop" layoutX="11.0" layoutY="271.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
+                  <Button fx:id="homeKnop" layoutX="8.0" layoutY="101.0" mnemonicParsing="false" onAction="#openHome" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Home" />
                </children></Pane>
             <Button fx:id="resultatenKnop" layoutX="7.0" layoutY="158.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Resultaten" />
             <Button fx:id="modulesKnop" layoutX="7.0" layoutY="120.0" mnemonicParsing="false" onAction="#openModules" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Modules" />

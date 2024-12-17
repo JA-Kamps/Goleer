@@ -69,6 +69,7 @@
                   <Button fx:id="modulesKnop" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#openModules" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Modules" />
                   <Button fx:id="resultatenKnop" layoutX="9.0" layoutY="49.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Resultaten" />
                   <Button fx:id="uitlogKnop" layoutX="12.0" layoutY="271.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
+                  <Button fx:id="homeKnop" layoutX="9.0" layoutY="86.0" mnemonicParsing="false" onAction="#openHome" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Home" />
                </children>
             </Pane>
          </children>

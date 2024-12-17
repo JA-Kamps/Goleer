@@ -32,6 +32,8 @@ public class Leerling_resultaten_controller {
     public Button resultatenKnop;
     @FXML
     public Button uitlogKnop;
+    @FXML
+    public Button homeKnop;
 
     public void openModuleResultaten (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("module resultaten leerliong.fxml"));
@@ -74,6 +76,13 @@ public class Leerling_resultaten_controller {
     }
     public void uitloggen (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
+    public void openHome (ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
