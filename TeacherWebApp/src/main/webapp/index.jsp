@@ -4,8 +4,8 @@
 <body>
 <nav>
     <img class="logo" src="images/logo.png">
-    <a href="register.html" class="nav-button">Registreren</a>
-    <a href="login.html" class="nav-button">Inloggen</a>
+    <a href="register.jsp" class="nav-button">Registreren</a>
+    <a href="login.jsp" class="nav-button">Inloggen</a>
 </nav>
 <img class="home-afbeelding" src="images/download 1.png" width="1833" height="328" alt="">
 <div class="content">
