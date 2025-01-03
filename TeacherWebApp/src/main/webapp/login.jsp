@@ -10,12 +10,19 @@
 <body>
 <div class="login-container">
     <h2>Inloggen</h2>
-    <form action="login.jsp" method="post">
+    <form action="login" method="post">
         <input type="text" placeholder="Email" id="email" name="email" required>
         <input type="password" placeholder="Wachtwoord" id="password" name="password" required>
         <input type="submit" value="Inloggen">
     </form>
 </div>
+<%
+    String errorMessage = (String) request.getAttribute("errorMessage");
+    if (errorMessage != null) {
+%>
+<p style="color: red;"><%= errorMessage %></p>
+<%
+    }
+%>
 </body>
 </html>
-

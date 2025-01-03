@@ -11,7 +11,7 @@
 
 <div class="register-container">
     <h2>Registreren</h2>
-    <form action="login.jsp" method="post">
+    <form action="register" method="post">
         <input type="text" placeholder="Voornaam" id="voornaam" name="voornaam" required>
         <input type="text" placeholder="Achternaam" id="achternaam" name="achternaam" required>
         <input type="text" placeholder="Email" id="email" name="email" required>
@@ -20,5 +20,13 @@
         <input type="submit" value="Registreren">
     </form>
 </div>
+<%
+    String errorMessage = (String) request.getAttribute("errorMessage");
+    if (errorMessage != null) {
+%>
+<p style="color: red;"><%= errorMessage %></p>
+<%
+    }
+%>
 </body>
 </html>
