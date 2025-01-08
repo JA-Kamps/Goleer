@@ -1,0 +1,25 @@
+body {
+    Margin: 0;
+}
+#layout {
+	display: grid;
+	grid-template-rows: 15% 1fr;
+	grid-template-columns: 15% 1fr;
+	gap: 0;
+	width: 100vw;
+	height: 100vh;
+}
+#top-bar {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: #08415C;
+	border-bottom: solid black 2px;
+}
+#side-menu {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #08415C;
+	border-right: solid black 2px;
+}
+#content {
+	grid-area: 2 / 2 / 3 / 3;
+
+}

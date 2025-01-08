@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+top-bar {
+    background-color: blue;
+    width: 100%;
+}
