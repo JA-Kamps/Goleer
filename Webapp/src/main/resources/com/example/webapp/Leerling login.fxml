@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -19,16 +20,17 @@
             </Text>
             <Pane layoutX="71.0" layoutY="183.0" prefHeight="34.0" prefWidth="458.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <TextField fx:id="myTextField" alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Gebruikersnaam" />
+                  <TextField fx:id="usernameField" alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Gebruikersnaam" />
                </children>
             </Pane>
+            <Label fx:id="messageLabel2" layoutX="240.0" layoutY="144.0" prefHeight="18.0" prefWidth="128.0" />
          </children>
       </AnchorPane>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Pane layoutX="71.0" layoutY="31.0" prefHeight="34.0" prefWidth="458.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <TextField alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Wachtwoord" />
+                  <TextField fx:id="passwordField" alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Wachtwoord" />
                </children>
             </Pane>
             <Button fx:id="loginKnop" layoutX="255.0" layoutY="91.0" mnemonicParsing="false" onAction="#leerlingInloggen" prefHeight="43.0" prefWidth="91.0" style="-fx-background-color: orange; -fx-background-radius: 11;" text="Login" />
