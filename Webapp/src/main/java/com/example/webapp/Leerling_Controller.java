@@ -44,7 +44,8 @@ public class Leerling_Controller {
     public void leerlingInloggen (ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        if (isLoginValid(username, password)) {
+        String classCode = ClassCodeHolder.getInstance().getClassCode();
+        if (isLoginValid(username, password, classCode)) {
             Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
             Scene scene = new Scene(root);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -55,15 +56,18 @@ public class Leerling_Controller {
         }
     }
 
-    private boolean isLoginValid(String username, String password) {
+    private boolean isLoginValid(String username, String password, String classCode) {
         boolean isValid = false;
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT COUNT(*) FROM Gebruikers WHERE gebruikersnaam = ? AND wachtwoord = ?";
+            String query = "SELECT idStudent FROM Student JOIN Class ON Student.Class_idClass = Class.idClass WHERE Name = ? AND Password = ? AND ClassCode = ?";
             try (PreparedStatement statement = connection.prepareStatement(query)) {
                 statement.setString(1, username);
                 statement.setString(2, password);
+                statement.setString(3, classCode);
                 try (ResultSet resultSet = statement.executeQuery()) {
-                    if (resultSet.next() && resultSet.getInt(1) > 0) {
+                    if (resultSet.next()) {
+                        int studentId = resultSet.getInt("idStudent");
+                        StudentHolder.getInstance().setStudentId(studentId);
                         isValid = true;
                     }
                 }
@@ -74,9 +78,11 @@ public class Leerling_Controller {
         return isValid;
     }
 
+
     public void Submit (ActionEvent event) throws IOException {
         String inputCode = classCodeField.getText();
         if (isClassCodeValid(inputCode)) {
+            ClassCodeHolder.getInstance().setClassCode(inputCode);
             Parent root = FXMLLoader.load(getClass().getResource("Leerling login.fxml"));
             Scene scene = new Scene(root);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -90,7 +96,7 @@ public class Leerling_Controller {
     private boolean isClassCodeValid(String inputCode) {
         boolean isValid = false;
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT COUNT(*) FROM Klassen WHERE code = ?";
+            String query = "SELECT COUNT(*) FROM Class WHERE ClassCode = ?";
             try (PreparedStatement statement = connection.prepareStatement(query)) {
                 statement.setString(1, inputCode);
                 try (ResultSet resultSet = statement.executeQuery()) {
