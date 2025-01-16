@@ -1,3 +1,5 @@
+package com.example;
+
 import org.mindrot.jbcrypt.BCrypt;
 
 public class PasswordUtil {
