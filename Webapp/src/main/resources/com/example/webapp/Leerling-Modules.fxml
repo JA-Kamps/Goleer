@@ -43,27 +43,6 @@
                   </Label>
                </bottom>
             </BorderPane>
-            <Button fx:id="rekenenKnop" layoutX="116.0" layoutY="143.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen 1A">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button layoutX="415.0" layoutY="143.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Label graphicTextGap="3.0" layoutX="265.0" layoutY="70.0" prefHeight="50.0" prefWidth="140.0" text="Modules" textAlignment="RIGHT">
-               <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-            <Button layoutX="265.0" layoutY="143.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="afgelopenModulesKnop" layoutX="107.0" layoutY="320.0" mnemonicParsing="false" onAction="#openModuleResultaten" style="-fx-background-color: orange;" text="Afgelopen modules" />
             <Pane layoutY="64.0" prefHeight="309.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
                <children>
                   <Button fx:id="modulesKnop" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#openModules" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Modules" />
@@ -72,6 +51,7 @@
                   <Button fx:id="homeKnop" layoutX="9.0" layoutY="86.0" mnemonicParsing="false" onAction="#openHome" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Home" />
                </children>
             </Pane>
+            <VBox fx:id="modulesVBox" alignment="CENTER" layoutX="91.0" layoutY="63.0" prefHeight="310.0" prefWidth="507.0" style="-fx-spacing: 10;" />
          </children>
       </AnchorPane>
    </children>
