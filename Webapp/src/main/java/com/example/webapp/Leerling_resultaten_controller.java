@@ -11,10 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Objects;
 
 public class Leerling_resultaten_controller {
@@ -25,8 +22,6 @@ public class Leerling_resultaten_controller {
     public Button persoonlijkeResultatenKnop;
     @FXML
     public Label moduleNaam;
-    @FXML
-    public Button afgelopenModulesKnop;
     @FXML
     public Button modulesKnop;
     @FXML
@@ -41,6 +36,20 @@ public class Leerling_resultaten_controller {
     public Label moduleLabel;
     @FXML
     public Label cijferLabel;
+    @FXML
+    public Label scoreLabel1;
+    @FXML
+    public Label scoreLabel2;
+    @FXML
+    public Label scoreLabel3;
+    @FXML
+    public Label scoreLabel4;
+    @FXML
+    public Label scoreLabel5;
+    @FXML
+    public Label scoreLabel6;
+    @FXML
+    public Button spelenKnop;
 
 
     public void openVakken (ActionEvent event) throws IOException {
@@ -57,15 +66,43 @@ public class Leerling_resultaten_controller {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+        String query = "SELECT Name FROM Student JOIN Module_has_Class_has_Student ON Student.idStudent = Module_has_Class_has_Student.Student_idStudent WHERE Module_has_Class_Class_idClass = ? ORDER BY SUM(Score) DESC LIMIT 6";
+        String classCode = ClassCodeHolder.getInstance().getClassCode();
+
+
+        String[] namen = new String[6];;
+        try (Connection connection = DatabaseUtil.getConnection()) {;
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, classCode);
+            ResultSet resultSet = statement.executeQuery();
+            int teller = 0;
+            while (resultSet.next()) {
+                namen[teller] = resultSet.getString("Name");
+                teller++;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        scoreLabel1.setText(namen[0]);
+        scoreLabel2.setText(namen[1]);
+        scoreLabel3.setText(namen[2]);
+        scoreLabel4.setText(namen[3]);
+        scoreLabel5.setText(namen[4]);
+        scoreLabel6.setText(namen[5]);
     }
+
     public void openModules (ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Modules.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+        initialize();
     }
     public void uitloggen (ActionEvent event) throws IOException {
+        ClassCodeHolder.getInstance().ClearCode();
+        StudentHolder.getInstance().ClearID();
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -131,6 +168,14 @@ public class Leerling_resultaten_controller {
             }
         }
 
+    }
+    public void openGame(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("game.fxml"));
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+        
     }
 }
 

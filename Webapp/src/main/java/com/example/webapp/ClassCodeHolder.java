@@ -22,5 +22,8 @@ public class ClassCodeHolder {
     public void setClassCode(String classCode) {
         this.classCode = classCode;
     }
+    public void ClearCode() {
+        this.classCode = null;
+    }
 }
 

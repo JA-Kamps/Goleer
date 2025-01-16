@@ -20,4 +20,7 @@ public class StudentHolder {
     public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
+    public void ClearID() {
+        this.studentId = 0;
+    }
 }

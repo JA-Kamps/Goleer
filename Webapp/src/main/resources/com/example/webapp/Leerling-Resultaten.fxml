@@ -58,56 +58,56 @@
             </Label>
             <Pane layoutX="140.0" layoutY="105.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="7.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_1ste_score" wrappingWidth="430.13671875">
+                  <Label fx:id="scoreLabel1" layoutX="6.0" layoutY="3.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_1ste_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Pane layoutX="140.0" layoutY="149.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="7.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_2de_score" wrappingWidth="445.33333333333326">
+                  <Label fx:id="scoreLabel2" layoutX="7.0" layoutY="3.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_2de_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Pane layoutX="140.0" layoutY="196.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="7.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_3de_score" wrappingWidth="445.33333333333326">
+                  <Label fx:id="scoreLabel3" layoutX="6.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_3de_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Pane layoutX="140.0" layoutY="239.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_4de_score" wrappingWidth="445.33333333333326">
+                  <Label fx:id="scoreLabel4" layoutX="8.0" layoutY="3.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_4de_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Pane layoutX="140.0" layoutY="282.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="6.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_5de_score" wrappingWidth="445.33333333333326">
+                  <Label fx:id="scoreLabel5" layoutX="7.0" layoutY="3.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_5de_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Pane layoutX="140.0" layoutY="327.0" prefHeight="33.0" prefWidth="445.0" style="-fx-background-color: white; -fx-background-radius: 11;">
                <children>
-                  <Text layoutX="6.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling_met_6de_score" wrappingWidth="445.33333333333326">
+                  <Label fx:id="scoreLabel6" layoutX="7.0" prefHeight="34.0" prefWidth="418.0" text="Leerling_met_6de_Score">
                      <font>
-                        <Font size="19.0" />
+                        <Font size="20.0" />
                      </font>
-                  </Text>
+                  </Label>
                </children>
             </Pane>
             <Text fill="#a8a8a8" layoutX="92.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1ste." wrappingWidth="40.8033447265625">

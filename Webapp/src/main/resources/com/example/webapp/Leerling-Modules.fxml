@@ -51,8 +51,7 @@
                   <Button fx:id="homeKnop" layoutX="9.0" layoutY="86.0" mnemonicParsing="false" onAction="#openHome" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Home" />
                </children>
             </Pane>
-            <VBox fx:id="modulesVBox" alignment="CENTER" layoutX="91.0" layoutY="63.0" prefHeight="257.0" prefWidth="507.0" style="-fx-spacing: 10;" />
-            <Button fx:id="afgelopenModulesKnop" layoutX="102.0" layoutY="329.0" mnemonicParsing="false" onAction="#openModuleResultaten" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: orange;" text="Afgelopen modules" />
+            <VBox fx:id="modulesVBox" alignment="CENTER" layoutX="91.0" layoutY="63.0" prefHeight="310.0" prefWidth="507.0" style="-fx-spacing: 10;" />
          </children>
       </AnchorPane>
    </children>
