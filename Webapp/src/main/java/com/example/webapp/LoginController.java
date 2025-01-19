@@ -15,9 +15,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 
-public class Leerling_Controller {
+public class LoginController {
 
 
     @FXML
@@ -37,7 +36,7 @@ public class Leerling_Controller {
     @FXML
     private TextField passwordField;
     @FXML
-    public Label messageLabel2;
+    private Label messageLabel2;
 
 
 
@@ -46,7 +45,7 @@ public class Leerling_Controller {
         String password = passwordField.getText();
         String classCode = ClassCodeHolder.getInstance().getClassCode();
         if (isLoginValid(username, password, classCode)) {
-            Parent root = FXMLLoader.load(getClass().getResource("Leerling - homepage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Homepage.fxml"));
             Scene scene = new Scene(root);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
@@ -83,7 +82,7 @@ public class Leerling_Controller {
         String inputCode = classCodeField.getText();
         if (isClassCodeValid(inputCode)) {
             ClassCodeHolder.getInstance().setClassCode(inputCode);
-            Parent root = FXMLLoader.load(getClass().getResource("Leerling login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Login.fxml"));
             Scene scene = new Scene(root);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(scene);
