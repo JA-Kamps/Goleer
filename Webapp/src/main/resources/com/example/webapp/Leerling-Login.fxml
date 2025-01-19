@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.LoginController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -23,7 +23,7 @@
                   <TextField fx:id="usernameField" alignment="TOP_CENTER" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="438.0" promptText="Gebruikersnaam" />
                </children>
             </Pane>
-            <Label fx:id="messageLabel2" layoutX="240.0" layoutY="144.0" prefHeight="18.0" prefWidth="128.0" />
+            <Label fx:id="messageLabel2" layoutX="139.0" layoutY="144.0" prefHeight="18.0" prefWidth="329.0" />
          </children>
       </AnchorPane>
       <Pane prefHeight="200.0" prefWidth="200.0">

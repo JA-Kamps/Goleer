@@ -6,13 +6,13 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class Leerling_Login extends Application {
+public class Start extends Application {
 
     @Override
     public void start(Stage stage) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("game.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
