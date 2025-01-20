@@ -23,29 +23,48 @@ public class LeerlingModuleResultaatController {
     private Label cijferLabel;
     @FXML
     private Label moduleLabel;
+    @FXML
+    private Label gespeeldLabel;
 
 
 
-    public void openGame(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("game.fxml"));
-        Scene scene = new Scene(root);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
+    public void openGame(ActionEvent event) throws IOException, SQLException {
+        int moduleID = ModuleIDHolder.getInstance().getModuleID();
+        int studentID = StudentHolder.getInstance().getStudentId();
 
+        try (Connection connection = DatabaseUtil.getConnection()) {
+            String query = "SELECT Module_has_Class_has_Student.Score FROM Module_has_Class_has_Student WHERE Module_has_Class_Module_idModule = ? AND Student_idStudent = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, moduleID);
+            statement.setInt(2, studentID);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                gespeeldLabel.setText("Je hebt deze module al afgemaakt!");
+            }
+            else {
+                Parent root = FXMLLoader.load(getClass().getResource("game.fxml"));
+                Scene scene = new Scene(root);
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setScene(scene);
+                window.show();
+            }
+        }
     }
     public void showModuleResults(ActionEvent event, int moduleId) throws IOException, SQLException {
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT Score FROM Module_has_Class_has_Student WHERE Student_idStudent = ?";
+            String query = "SELECT Score FROM Module_has_Class_has_Student WHERE Student_idStudent = ? AND Module_has_Class_Module_idModule = ?";
             PreparedStatement statement = connection.prepareStatement(query);
             int studentId = StudentHolder.getInstance().getStudentId();
+            ModuleIDHolder.getInstance().setModuleID(moduleId);
             statement.setInt(1, studentId);
+            statement.setInt(2, moduleId);
             ResultSet resultSet = statement.executeQuery();
             int score = 0;
             if (resultSet.next()) {
                 score = resultSet.getInt("Score");
+                cijferLabel.setText(score + "");
             }
-            cijferLabel.setText(String.valueOf(score));
+
         }
         try (Connection connection = DatabaseUtil.getConnection()) {
             String query = "SELECT Name FROM Module WHERE idModule = ?";
@@ -81,6 +100,7 @@ public class LeerlingModuleResultaatController {
     }
     public void uitloggen (ActionEvent event) throws IOException {
         ClassCodeHolder.getInstance().ClearCode();
+        ModuleIDHolder.getInstance().clearModuleID();
         StudentHolder.getInstance().ClearID();
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
         Scene scene = new Scene(root);

@@ -84,6 +84,7 @@ public class ModulesController {
 
     public void uitloggen(ActionEvent event) throws IOException {
         ClassCodeHolder.getInstance().ClearCode();
+        ModuleIDHolder.getInstance().clearModuleID();
         StudentHolder.getInstance().ClearID();
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
         Scene scene = new Scene(root);

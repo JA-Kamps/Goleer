@@ -1,6 +1,9 @@
 package com.example.webapp;
 
+import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,9 +18,15 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameController {
     @FXML
@@ -89,37 +98,39 @@ public class GameController {
     private int attempts = 1;
     private boolean isCompleted = false;
 
+    public void db() throws SQLException {
+        try (Connection connection = DatabaseUtil.getConnection()) {
+            String query = "SELECT Answers, CorrectAnswer, Question FROM AnswerValue WHERE Module_idModule = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            int moduleID = ModuleIDHolder.getInstance().getModuleID();
+            statement.setInt(1, moduleID);
+            ResultSet resultSet = statement.executeQuery();
+            List<Integer> correctAnswerList = new ArrayList<>();
+            while (resultSet.next()) {
+                questions.add(resultSet.getString("Question"));
+                String[] splitAnswers = resultSet.getString("Answers").split(",");
+                answers.add(splitAnswers);
+                correctAnswerList.add(resultSet.getInt("CorrectAnswer"));
+            }
+            correctAnswers = correctAnswerList.stream().mapToInt(i -> i).toArray();
+            maxPipesRows = questions.size();
+        }
+    }
     // Question system
-    private String[] questions = {
-            "Wat is 2 + 2?",
-            "Wat is de hoofdstad van Frankrijk?",
-            "Wat is 5 * 3?",
-            "Wat is de grootste zee in de wereld?",
-            "Wat eet een koe?",
-            "Wat is de grootste planeet?",
-            "Hoe noem je de baby van een hond?",
-            "De hond ... in de tuin?",
-            "Hoveel dagen zitten er in een week?",
-            "Hoe heet het seizoen waarin de baderen van de bomen vallen?"
-    };
-    private String[][] answers = {
-            {"3", "4", "5"},
-            {"Berlijn", "Madrid", "Parijs"},
-            {"15", "10", "20"},
-            {"Noordzee", "De Rijn", "Stille Oceaan"},
-            {"Gras", "Varken", "Koeien"},
-            {"Mars", "Jupiter", "Zon"},
-            {"Kalf", "Kleine hond", "Puppy"},
-            {"Loopt", "Loop", "Loopdt"},
-            {"6", "7", "9"},
-            {"Winter", "Zomer", "Herfst"}
-    };
-    private int[] correctAnswers = {1, 2, 0, 2, 0, 1, 2, 0, 1, 2}; // Indexes of correct answers in each question
+    private List<String> questions = new ArrayList<>();
+    private List<String[]> answers = new ArrayList<String[]>();
+
+
+
+
+    private int[] correctAnswers; // Indexes of correct answers in each question
     private int currentQuestionIndex = 0;
-    private int maxPipesRows = questions.length;
+    private int maxPipesRows;
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
+        db();
+
         gc = gameCanvas.getGraphicsContext2D();
 
         // Load images
@@ -138,7 +149,13 @@ public class GameController {
             @Override
             public void handle(long now) {
                 if (!gameOver) {
-                    move();
+                    try {
+                        move();
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     draw();
                 }
             }
@@ -146,22 +163,24 @@ public class GameController {
         gameLoop.start();
 
         // Timer for placing pipes
-        javafx.animation.Timeline pipePlacer = new javafx.animation.Timeline(
-                new javafx.animation.KeyFrame(
-                        javafx.util.Duration.seconds(4),
+        Timeline pipePlacer = new Timeline(
+                new KeyFrame(
+                        Duration.seconds(4),
                         event -> placePipes()
                 )
         );
-        pipePlacer.setCycleCount(javafx.animation.Animation.INDEFINITE);
+        pipePlacer.setCycleCount(Animation.INDEFINITE);
         pipePlacer.play();
 
         gameCanvas.setOnKeyPressed(this::handleKeyPress);
         gameCanvas.setFocusTraversable(true);
     }
 
+
     private void placePipes() {
         if (currentPipesRows >= maxPipesRows) {
             isCompleted = true;
+
             return;
         } else {
             currentPipesRows++;
@@ -244,11 +263,14 @@ public class GameController {
         if (!gameOver) {
             gc.setFill(Color.BLACK);
             gc.setFont(new Font("Arial", 12));
-            gc.fillText("Question: " + questions[currentQuestionIndex], 10, 100);
-            for (int i = 0; i < answers[currentQuestionIndex].length; i++) {
-                gc.setFont(new Font("Arial", 18));
-                gc.fillText((i + 1) + ". " + answers[currentQuestionIndex][i], 10, 130 + i * 220);
-            }
+            gc.fillText("Question: " + questions.get(currentQuestionIndex), 10, 100);
+
+            // Display answers at the pipe openings
+            String[] currentAnswers = answers.get(currentQuestionIndex);
+            gc.setFont(new Font("Arial", 18));
+            gc.fillText("A: " + currentAnswers[0], 10, 65 + 20); // Adjust the y-position as needed
+            gc.fillText("B: " + currentAnswers[1], 10, 300 + 20); // Adjust the y-position as needed
+            gc.fillText("C: " + currentAnswers[2], 10, 580 + 20); // Adjust the y-position as needed
         }
 
         // Game over messages
@@ -260,7 +282,7 @@ public class GameController {
         }
     }
 
-    private void move() {
+    private void move() throws SQLException, IOException {
         velocityY += gravity;
         bird.y += velocityY;
         bird.y = Math.max(bird.y, 0);
@@ -275,7 +297,7 @@ public class GameController {
 
                 // Update question index based on the integer part of the score
                 if ((int) score > currentQuestionIndex) {
-                    currentQuestionIndex = Math.min((int) score, questions.length - 1);
+                    currentQuestionIndex = Math.min((int) score, questions.size() - 1);
                 }
             }
 
@@ -287,12 +309,43 @@ public class GameController {
         }
 
         if (score >= maxPipesRows) {
+            saveScore();
             gameOver = true;
         }
 
         if (bird.y > boardHeight) {
             gameOver = true;
         }
+    }
+
+    private void saveScore() throws SQLException {
+        int teacherId = 0;
+        int classId = 0;
+        int studentId = StudentHolder.getInstance().getStudentId();
+        int moduleID = ModuleIDHolder.getInstance().getModuleID();
+        try (Connection connection = DatabaseUtil.getConnection()) {
+            String query = "SELECT Teacher_idTeacher, Class_idClass FROM Student WHERE idStudent = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, studentId);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                teacherId = resultSet.getInt("Teacher_idTeacher");
+                classId = resultSet.getInt("Class_idClass");
+            }
+        }
+        try (Connection connection = DatabaseUtil.getConnection()) {
+            String query = "INSERT INTO Module_has_Class_has_Student (Module_has_Class_Module_idModule, Module_has_Class_Class_idClass, Module_has_Class_Class_Teacher_idTeacher, Student_idStudent, Score) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, moduleID);
+            statement.setInt(2, classId);
+            statement.setInt(3, teacherId);
+            statement.setInt(4, studentId);
+            statement.setDouble(5, score);
+            statement.execute();
+
+        }
+
+
     }
 
     private boolean collision(Bird a, Pipe b) {
@@ -341,12 +394,13 @@ public class GameController {
     private void handleAnswer(int answerIndex) {
         if (answerIndex == correctAnswers[currentQuestionIndex]) {
             score++;
-            currentQuestionIndex = Math.min((int) score, questions.length - 1); // Move to the next question
+            currentQuestionIndex = Math.min((int) score, questions.size() - 1); // Move to the next question
         } else {
             gameOver = true; // End the game if the answer is wrong
         }
     }
     public void gaTerug(ActionEvent event) throws IOException {
+        ModuleIDHolder.getInstance().clearModuleID();
         Parent root = FXMLLoader.load(getClass().getResource("Leerling-Modules.fxml"));
         Scene scene = new Scene(root);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

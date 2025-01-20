@@ -50,23 +50,25 @@
                </children></Pane>
             <Button fx:id="resultatenKnop" layoutX="7.0" layoutY="158.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Resultaten" />
             <Button fx:id="modulesKnop" layoutX="7.0" layoutY="120.0" mnemonicParsing="false" onAction="#openModules" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: orange;" text="Modules" />
-            <Pane layoutX="453.0" layoutY="107.0" prefHeight="59.0" prefWidth="83.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+            <Pane layoutX="453.0" layoutY="107.0" prefHeight="91.0" prefWidth="83.0" style="-fx-background-color: white; -fx-background-radius: 12;">
                <children>
-                  <Label layoutX="22.0" layoutY="14.0" text="Klas">
+                  <Label fx:id="klasLabel" layoutX="22.0" layoutY="46.0" prefHeight="32.0" prefWidth="39.0" text="Klas">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="54.0" text="Klas:" />
                </children></Pane>
-            <Pane layoutX="177.0" layoutY="107.0" prefHeight="59.0" prefWidth="276.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+            <Pane layoutX="178.0" layoutY="107.0" prefHeight="91.0" prefWidth="276.0" style="-fx-background-color: white; -fx-background-radius: 12;">
                <children>
-                  <Label layoutX="14.0" layoutY="2.0" prefHeight="48.0" prefWidth="227.0" text="Leerling.naam">
+                  <Label fx:id="naamLabel" layoutX="14.0" layoutY="43.0" prefHeight="48.0" prefWidth="227.0" text="Student.Name">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
+                  <Label layoutX="27.0" layoutY="11.0" prefHeight="32.0" prefWidth="146.0" text="Naam:" />
                </children></Pane>
-            <Pane layoutX="116.0" layoutY="107.0" prefHeight="59.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
+            <Pane layoutX="116.0" layoutY="107.0" prefHeight="91.0" prefWidth="62.0" style="-fx-background-color: white; -fx-background-radius: 12;" />
          </children>
       </AnchorPane>
    </children>

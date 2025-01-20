@@ -21,6 +21,6 @@ public class StudentHolder {
         this.studentId = studentId;
     }
     public void ClearID() {
-        this.studentId = 0;
+        this.studentId = -1;
     }
 }
