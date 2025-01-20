@@ -269,8 +269,9 @@ public class GameController {
             pipe.x += velocityX;
 
             if (!pipe.passed && bird.x > pipe.x + pipe.width) {
-                score += 0.25;
+                score += 0.16666667;
                 pipe.passed = true;
+
 
                 // Update question index based on the integer part of the score
                 if ((int) score > currentQuestionIndex) {
