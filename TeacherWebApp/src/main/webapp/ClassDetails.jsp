@@ -82,6 +82,13 @@
             }
         }
 
+
+            function confirmDeleteClass(classId) {
+                if (confirm("Weet je zeker dat je de klas wilt verwijderen?")) {
+                    window.location.href = "deleteClass?id=" + classId;
+                }
+            }
+
         function showPopup() {
             document.getElementById("popupForm").style.display = "block";
         }
@@ -131,6 +138,7 @@
             %>
         </table>
         <button type="button" onclick="showPopup()">Create New Student</button>
+        <button type="button" onclick="confirmDeleteClass(<%= classId %>)">Verwijder klass</button>
 
         <!-- Popup Form -->
         <div id="popupForm" style="display:none;">
