@@ -32,7 +32,6 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -40,12 +39,13 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.LoginController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -98,12 +98,14 @@
                   <TextArea layoutX="5.0" layoutY="5.0" prefHeight="41.0" prefWidth="336.0" />
                </children>
             </Pane>
-            <Button layoutX="265.0" layoutY="239.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: orange;" text="Meedoen">
+            <Button fx:id="MeedoenKnop" layoutX="265.0" layoutY="239.0" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: orange;" text="Meedoen">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <TextField layoutX="152.0" layoutY="172.0" prefHeight="41.0" prefWidth="336.0" />
+            <TextField fx:id="classCodeField" layoutX="152.0" layoutY="172.0" prefHeight="41.0" prefWidth="336.0" />
+            <Button fx:id="wifiKnop" layoutX="42.0" layoutY="307.0" mnemonicParsing="false" onAction="#openNetwerken" style="-fx-background-color: orange;" text="Wifi" />
+            <Label fx:id="messageLabel" layoutX="268.0" layoutY="298.0" prefHeight="18.0" prefWidth="110.0" />
       </children>
     </AnchorPane>
   </children>

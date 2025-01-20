@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+}
+
+#layout {
+	display: grid;
+	grid-template-rows: 15% 1fr;
+	grid-template-columns: 15% 1fr;
+	gap: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#top-bar {
+	grid-area: 1 / 1 / 2 / 3;
+	display: flex;
+	align-items: center;
+	background-color: #08415C;
+	border-bottom: solid black 2px;
+	padding: 10px;
+}
+
+#cssportal-grid {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-color: white;
+}
+
+.logo2 {
+	width: auto;
+	height: 100px;
+	margin-right: 20px;
+	margin-left: 40px;
+}
+
+.welkomTekst, .paginaInfo {
+	margin: 0 20px;
+}
+
+#side-menu {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #08415C;
+	border-right: solid black 2px;
+
+}
+
+#content {
+	grid-area: 2 / 2 / 3 / 3;
+}
+.welkomTekst {
+	font-size: 20px;
+}
+.paginaInfo {
+	font-size: 40px;
+	margin-left: 300px;
+}
+.nav-button2 {
+	text-align: center;
+	background-color: #EB5E28;
+	color: #08415C;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-size: 30px;
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	border-radius: 60px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.logout-button {
+	padding: 10px 20px;
+	text-align: center;
+	color: #000000;
+	background-color: #ff2233;
+	margin-top: 400px;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	width: 150px;
+	height: 30px;
+	border-radius: 60px;
+	text-decoration: none;
+	font-size: 30px;
+}

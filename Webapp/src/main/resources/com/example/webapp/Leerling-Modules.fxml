@@ -7,10 +7,11 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.Leerling_resultaten_controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.ModulesController">
    <children>
       <MenuBar>
         <menus>
@@ -31,14 +32,9 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Green;">
+      <AnchorPane prefHeight="382.0" prefWidth="600.0" style="-fx-background-color: Green;">
          <children>
-            <BorderPane layoutY="46.0" prefHeight="330.0" prefWidth="83.0" style="-fx-background-color: darkGreen;">
-               <top>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: orange;" text="Meedoen" BorderPane.alignment="CENTER" />
-               </top>
-            </BorderPane>
-            <BorderPane layoutY="-4.0" prefHeight="17.0" prefWidth="600.0" style="-fx-background-color: DarkGreen;">
+            <BorderPane layoutY="-4.0" prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: DarkGreen;">
                <bottom>
                   <Label prefHeight="50.0" prefWidth="219.0" text="Jouw Modules" textFill="#8d8d8d" BorderPane.alignment="CENTER">
                      <font>
@@ -47,28 +43,15 @@
                   </Label>
                </bottom>
             </BorderPane>
-            <Button layoutX="3.0" layoutY="83.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Modules" />
-            <Button layoutX="3.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: orange;" text="Resultaten" />
-            <Button fx:id="rekenenKnop" layoutX="116.0" layoutY="118.0" mnemonicParsing="false" onAction="#openRekenen" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="Rekenen 1A">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="taalKnop" layoutX="413.0" layoutY="118.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="ABC voor beginners" wrapText="true">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Label graphicTextGap="3.0" layoutX="265.0" layoutY="58.0" prefHeight="50.0" prefWidth="140.0" text="Modules" textAlignment="RIGHT">
-               <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-            <Button fx:id="taalKnop1" layoutX="265.0" layoutY="118.0" mnemonicParsing="false" onAction="#openTaal" prefHeight="49.0" prefWidth="140.0" style="-fx-background-color: white; -fx-background-radius: 9;" text="geometrie">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
+            <Pane layoutY="64.0" prefHeight="309.0" prefWidth="91.0" style="-fx-background-color: darkgreen;">
+               <children>
+                  <Button fx:id="modulesKnop" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#openModules" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Modules" />
+                  <Button fx:id="resultatenKnop" layoutX="9.0" layoutY="49.0" mnemonicParsing="false" onAction="#openResultaten" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Resultaten" />
+                  <Button fx:id="uitlogKnop" layoutX="12.0" layoutY="271.0" mnemonicParsing="false" onAction="#uitloggen" style="-fx-background-color: red;" text="Uitloggen" />
+                  <Button fx:id="homeKnop" layoutX="9.0" layoutY="86.0" mnemonicParsing="false" onAction="#openHome" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Home" />
+               </children>
+            </Pane>
+            <VBox fx:id="modulesVBox" alignment="CENTER" layoutX="91.0" layoutY="63.0" prefHeight="310.0" prefWidth="507.0" style="-fx-spacing: 10;" />
          </children>
       </AnchorPane>
    </children>
