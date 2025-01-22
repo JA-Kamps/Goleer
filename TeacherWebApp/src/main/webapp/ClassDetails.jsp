@@ -13,15 +13,21 @@
 
     Integer idTeacher = (Integer) session.getAttribute("idTeacher");
     String firstName = "";
+    String Klas = "";
+    String klasCode = "";
     Integer classId = Integer.parseInt(request.getParameter("id"));
 
     if (idTeacher != null) {
         try (Connection connection = DatabaseUtil.getConnection();
-             PreparedStatement statement = connection.prepareStatement("SELECT FirstName FROM Teacher WHERE idTeacher = ?")) {
+             PreparedStatement statement = connection.prepareStatement("SELECT FirstName, ClassName, ClassCode FROM Teacher JOIN Class on Teacher_idTeacher = idTeacher WHERE idTeacher = ? AND idClass = ?")) {
             statement.setInt(1, idTeacher);
+            statement.setInt(2, classId);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     firstName = resultSet.getString("FirstName");
+                    Klas = resultSet.getString("ClassName");
+                    klasCode = resultSet.getString("ClassCode");
+
                 }
             }
         } catch (SQLException e) {
@@ -104,7 +110,7 @@
         <div id="cssportal-grid">
             <img src="images/logo.png" class="logo2">
             <p class="welkomTekst">Welkom <%= firstName %>!</p>
-            <p class="paginaInfo">Module bibliotheek</p>
+            <p class="paginaInfo">Klas <%= Klas %>. <br> Klas code: <%= klasCode%></p>
         </div>
     </div>
     <div id="side-menu">
