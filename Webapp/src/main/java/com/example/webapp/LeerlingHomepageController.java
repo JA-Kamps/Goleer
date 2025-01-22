@@ -36,10 +36,12 @@ public class LeerlingHomepageController {
         String naam = "";
         String klasnaam = "";
         String ClassCode = ClassCodeHolder.getInstance().getClassCode();
+        int StudentID = StudentHolder.getInstance().getStudentId();
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT Name, ClassName FROM Student JOIN Class ON Student.Class_idClass = Class.idClass WHERE ClassCode = ?";
+            String query = "SELECT Name, ClassName FROM Student JOIN Class ON Student.Class_idClass = Class.idClass WHERE ClassCode = ? AND idStudent = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, ClassCode);
+            preparedStatement.setInt(2, StudentID);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 naam = resultSet.getString("Name");

@@ -151,9 +151,7 @@ public class GameController {
                 if (!gameOver) {
                     try {
                         move();
-                    } catch (SQLException e) {
-                        throw new RuntimeException(e);
-                    } catch (IOException e) {
+                    } catch (SQLException | IOException e) {
                         throw new RuntimeException(e);
                     }
                     draw();
