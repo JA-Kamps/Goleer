@@ -22,16 +22,6 @@ public class LoginController {
     @FXML
     public Button loginKnop;
     @FXML
-    public Button MeedoenKnop;
-    @FXML
-    public Button wifiKnop;
-    @FXML
-    public Button verbindenKnop;
-    @FXML
-    public TextField classCodeField;
-    @FXML
-    private Label messageLabel;
-    @FXML
     private TextField usernameField;
     @FXML
     private TextField passwordField;
@@ -75,55 +65,6 @@ public class LoginController {
             e.printStackTrace();
         }
         return isValid;
-    }
-
-
-    public void Submit (ActionEvent event) throws IOException {
-        String inputCode = classCodeField.getText();
-        if (isClassCodeValid(inputCode)) {
-            ClassCodeHolder.getInstance().setClassCode(inputCode);
-            Parent root = FXMLLoader.load(getClass().getResource("Leerling-Login.fxml"));
-            Scene scene = new Scene(root);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(scene);
-            window.show();
-        } else {
-            messageLabel.setText("Ongeldige klassencode. Probeer het opnieuw.");
-        }
-    }
-
-    private boolean isClassCodeValid(String inputCode) {
-        boolean isValid = false;
-        try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT COUNT(*) FROM Class WHERE ClassCode = ?";
-            try (PreparedStatement statement = connection.prepareStatement(query)) {
-                statement.setString(1, inputCode);
-                try (ResultSet resultSet = statement.executeQuery()) {
-                    if (resultSet.next() && resultSet.getInt(1) > 0) {
-                        isValid = true;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return isValid;
-    }
-
-    public void openNetwerken (ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("wifi-netwerken.fxml"));
-        Scene scene = new Scene(root);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-    }
-
-    public void verbind (ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Leerling-Meedoen.fxml"));
-        Scene scene = new Scene(root);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
     }
 }
 

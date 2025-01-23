@@ -1,0 +1,4 @@
+.button:focused, .text-field:focused {
+    -fx-border-color: blue;
+    -fx-border-width: 2px;
+}

@@ -9,7 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import java.net.URL?>
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webapp.LoginController">
+   <stylesheets>
+      <URL value="@css/style.css" />
+   </stylesheets>
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
