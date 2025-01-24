@@ -1,4 +1,5 @@
 package com.example.webapp;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,7 +20,6 @@ import java.sql.SQLException;
 
 public class LoginController {
 
-
     @FXML
     public Button loginKnop;
     @FXML
@@ -28,9 +29,43 @@ public class LoginController {
     @FXML
     private Label messageLabel2;
 
+    @FXML
+    public void initialize() {
+        // Set focus on the username field after the stage is shown
+        Platform.runLater(() -> usernameField.requestFocus());
 
+        // Add event handler for Enter key on the username field
+        usernameField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                passwordField.requestFocus();
+                event.consume(); // Prevent default behavior
+            }
+        });
 
-    public void leerlingInloggen (ActionEvent event) throws IOException {
+        // Add event handler for Enter key on the password field
+        passwordField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                loginKnop.requestFocus();
+                event.consume(); // Prevent default behavior
+            } else if (event.getCode() == KeyCode.UP) {
+                usernameField.requestFocus();
+                event.consume(); // Prevent default behavior
+            }
+        });
+
+        // Add event handler for Enter key on the login button
+        loginKnop.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                loginKnop.fire();
+                event.consume(); // Prevent default behavior
+            } else if (event.getCode() == KeyCode.UP) {
+                passwordField.requestFocus();
+                event.consume(); // Prevent default behavior
+            }
+        });
+    }
+
+    public void leerlingInloggen(ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
         String classCode = ClassCodeHolder.getInstance().getClassCode();

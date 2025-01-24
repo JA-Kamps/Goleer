@@ -1,14 +1,17 @@
 package com.example.webapp;
 
-import javafx.event.ActionEvent;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.Node;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,8 +19,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class MeedoenController {
 
@@ -28,9 +32,29 @@ public class MeedoenController {
     @FXML
     public Button MeedoenKnop;
 
+    private List<Node> elements;
+    private int currentIndex = 0;
 
+    @FXML
+    public void initialize() {
+        elements = new ArrayList<>();
+        elements.add(classCodeField);
+        elements.add(MeedoenKnop);
 
-    public void Submit (ActionEvent event) throws IOException {
+        // Set focus on the first element
+        Platform.runLater(() -> classCodeField.requestFocus());
+
+        // Add event handler for Enter key on the TextField
+        classCodeField.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                currentIndex = (currentIndex + 1) % elements.size();
+                elements.get(currentIndex).requestFocus();
+                event.consume(); // Prevent default behavior
+            }
+        });
+    }
+
+    public void Submit(ActionEvent event) throws IOException {
         String inputCode = classCodeField.getText();
         if (isClassCodeValid(inputCode)) {
             ClassCodeHolder.getInstance().setClassCode(inputCode);
@@ -61,4 +85,5 @@ public class MeedoenController {
         }
         return isValid;
     }
+
 }
