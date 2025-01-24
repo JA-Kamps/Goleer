@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LeerlingHomepageController {
     @FXML
@@ -31,15 +34,20 @@ public class LeerlingHomepageController {
     @FXML
     private Label klasLabel;
 
+    private List<javafx.scene.Node> elements;
+    private int currentIndex = 0;
+
     @FXML
     public void initialize() {
         String naam = "";
         String klasnaam = "";
         String ClassCode = ClassCodeHolder.getInstance().getClassCode();
+        int StudentID = StudentHolder.getInstance().getStudentId();
         try (Connection connection = DatabaseUtil.getConnection()) {
-            String query = "SELECT Name, ClassName FROM Student JOIN Class ON Student.Class_idClass = Class.idClass WHERE ClassCode = ?";
+            String query = "SELECT Name, ClassName FROM Student JOIN Class ON Student.Class_idClass = Class.idClass WHERE ClassCode = ? AND idStudent = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, ClassCode);
+            preparedStatement.setInt(2, StudentID);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 naam = resultSet.getString("Name");
@@ -50,6 +58,14 @@ public class LeerlingHomepageController {
         }
         naamLabel.setText(naam);
         klasLabel.setText(klasnaam);
+
+        elements = new ArrayList<>();
+        elements.add(uitlogKnop);
+        elements.add(homeKnop);
+        elements.add(resultatenKnop);
+        elements.add(modulesKnop);
+
+        elements.get(currentIndex).requestFocus();
     }
 
     public void openResultaten(ActionEvent event) throws IOException {
@@ -86,4 +102,5 @@ public class LeerlingHomepageController {
         window.setScene(scene);
         window.show();
     }
+
 }

@@ -36,6 +36,7 @@ body {
 
 .welkomTekst, .paginaInfo {
 	margin: 0 20px;
+	color: orange;
 }
 
 #side-menu {

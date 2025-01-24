@@ -1,5 +1,6 @@
 package com.example.webapp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +26,11 @@ public class LeerlingModuleResultaatController {
     private Label moduleLabel;
     @FXML
     private Label gespeeldLabel;
+
+    @FXML
+    public void initialize () {
+        Platform.runLater(() -> spelenKnop.requestFocus());
+    }
 
 
 
