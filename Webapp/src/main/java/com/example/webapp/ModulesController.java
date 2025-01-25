@@ -1,6 +1,7 @@
 package com.example.webapp;
 
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -16,13 +18,27 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModulesController {
     @FXML
     private VBox modulesVBox;
+    @FXML
+    public Button resultatenKnop;
+    @FXML
+    public Button modulesKnop;
+    @FXML
+    public Button homeKnop;
+    @FXML
+    public Button uitlogKnop;
+
+    private List<Node> elements;
+    private int currentIndex = 0;
 
     @FXML
     public void initialize() {
+        elements = new ArrayList<>();
         String classCode = ClassCodeHolder.getInstance().getClassCode();
         try (Connection connection = DatabaseUtil.getConnection()) {
             String query = "SELECT DISTINCT idModule, Name " +
@@ -52,9 +68,47 @@ public class ModulesController {
                     }
                 });
                 modulesVBox.getChildren().add(moduleButton);
+                elements.add(moduleButton); // Add module button to the elements list
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+
+        // Add side buttons to the elements list
+        elements.add(resultatenKnop);
+        elements.add(modulesKnop);
+        elements.add(homeKnop);
+        elements.add(uitlogKnop);
+
+        // Set focus on the first element after the stage is shown
+        Platform.runLater(() -> {
+            if (!elements.isEmpty()) {
+                elements.get(currentIndex).requestFocus();
+            }
+        });
+
+        Platform.runLater(() -> {
+            Scene scene = modulesVBox.getScene();
+            if (scene != null) {
+                scene.setOnKeyPressed(this::handleKeyPress);
+            }
+        });
+
+    }
+
+    @FXML
+    private void handleKeyPress(KeyEvent event) {
+        switch (event.getCode()) {
+            case DOWN:
+                currentIndex = (currentIndex + 1) % elements.size();
+                elements.get(currentIndex).requestFocus();
+                break;
+            case UP:
+                currentIndex = (currentIndex - 1 + elements.size()) % elements.size();
+                elements.get(currentIndex).requestFocus();
+                break;
+            default:
+                break;
         }
     }
 

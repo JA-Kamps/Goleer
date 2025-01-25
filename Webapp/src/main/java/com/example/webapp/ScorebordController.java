@@ -12,13 +12,10 @@ import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ScorebordController {
-
-
-
-    @FXML
-    public Button persoonlijkeResultatenKnop;
     @FXML
     private Label scoreLabel1;
     @FXML
@@ -32,8 +29,11 @@ public class ScorebordController {
     @FXML
     private Label scoreLabel6;
 
+
+
     public void initialize() {
         vulScorebord();
+
     }
 
 

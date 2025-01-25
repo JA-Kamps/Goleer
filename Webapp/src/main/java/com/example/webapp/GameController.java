@@ -4,6 +4,7 @@ import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -129,6 +130,7 @@ public class GameController {
 
     @FXML
     public void initialize() throws SQLException {
+        Platform.runLater(() -> gameCanvas.requestFocus());
         db();
 
         gc = gameCanvas.getGraphicsContext2D();
@@ -274,7 +276,11 @@ public class GameController {
         // Game over messages
         if (gameOver) {
             gc.setFont(new Font("Arial", 50));
-            gc.fillText("Game Over", 80, 150);
+            if (isCompleted) {
+                gc.fillText("Uitgespeeld!", 80, 150);
+            } else {
+                gc.fillText("Game Over", 80, 150);
+            }
             gc.setFont(new Font("Arial", 30));
             gc.fillText("Attempts: " + attempts, 10, 360);
         }
@@ -309,6 +315,7 @@ public class GameController {
         if (score >= maxPipesRows) {
             saveScore();
             gameOver = true;
+            isCompleted = true;
         }
 
         if (bird.y > boardHeight) {
@@ -354,8 +361,10 @@ public class GameController {
     }
 
     private void handleKeyPress(KeyEvent e) {
+
+
         switch (e.getCode()) {
-            case SPACE:
+            case UP:
                 if (isCompleted) {
                     return; // Prevent restarting the game after completing all pipes
                 }

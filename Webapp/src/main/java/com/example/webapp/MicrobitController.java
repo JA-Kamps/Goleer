@@ -3,6 +3,7 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+
 public class MicrobitController {
     public static void main(String[] args) {
         SerialPort comPort = null;
@@ -27,7 +28,9 @@ public class MicrobitController {
             }
 
             if (comPort.openPort()) {
-                System.out.println("Port opened.");
+                comPort.setBaudRate(115200); // Stel de baudrate in
+                // System.out.println("Port opened.");
+
             } else {
                 System.out.println("Failed to open port. Error: " + comPort.getLastErrorCode());
                 try {
@@ -41,17 +44,16 @@ public class MicrobitController {
 
         try {
             Robot robot = new Robot();
-            System.out.print("help");
             while (true) {
                 try {
                     if (comPort.bytesAvailable() > 0) {
-                        System.out.println("Bytes available: " + comPort.bytesAvailable());
                         byte[] readBuffer = new byte[comPort.bytesAvailable()];
                         comPort.readBytes(readBuffer, readBuffer.length);
-                        System.out.println("Read bytes: " + new String(readBuffer));
+                        String receivedData = new String(readBuffer);
+                        System.out.println("Read bytes: " + receivedData);
 
-                        for (byte b : readBuffer) {
-                            switch (b) {
+                        for (char c : receivedData.toCharArray()) {
+                            switch (c) {
                                 case 'a':
                                     System.out.println("Received 'a'");
                                     robot.keyPress(KeyEvent.VK_UP);
@@ -68,12 +70,10 @@ public class MicrobitController {
                                     robot.keyRelease(KeyEvent.VK_SPACE);
                                     break;
                                 default:
-                                    System.out.println("Received unknown byte: " + b);
+                                    System.out.println("Received unknown byte: " + c);
                                     break;
                             }
                         }
-                    } else {
-                        System.out.println("Bytes available: " + comPort.bytesAvailable());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
