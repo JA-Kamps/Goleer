@@ -364,7 +364,7 @@ public class GameController {
 
 
         switch (e.getCode()) {
-            case SPACE:
+            case UP:
                 if (isCompleted) {
                     return; // Prevent restarting the game after completing all pipes
                 }
